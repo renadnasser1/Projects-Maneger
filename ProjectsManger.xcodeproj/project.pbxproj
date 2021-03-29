@@ -15,6 +15,15 @@
 		C9691CBA26112ADB0039A509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9691CB826112ADB0039A509 /* LaunchScreen.storyboard */; };
 		C9691CC526112ADB0039A509 /* ProjectsMangerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CC426112ADB0039A509 /* ProjectsMangerTests.swift */; };
 		C9691CD026112ADB0039A509 /* ProjectsMangerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CCF26112ADB0039A509 /* ProjectsMangerUITests.swift */; };
+		C9691CE9261131670039A509 /* ProjectsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CE8261131670039A509 /* ProjectsListViewController.swift */; };
+		C9691CF4261132930039A509 /* ProjectsManger.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9691CF2261132930039A509 /* ProjectsManger.xcdatamodeld */; };
+		C9691CF9261135C00039A509 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CF8261135C00039A509 /* DataController.swift */; };
+		C9691D02261138890039A509 /* Project + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D01261138890039A509 /* Project + Extension.swift */; };
+		C9691D0B261147C50039A509 /* ProjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D0A261147C50039A509 /* ProjectCell.swift */; };
+		C9691D1B261150090039A509 /* AddProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D1A261150090039A509 /* AddProjectViewController.swift */; };
+		C9691D20261167EC0039A509 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D1F261167EC0039A509 /* ProjectViewController.swift */; };
+		C9691D2526116F390039A509 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D2426116F390039A509 /* AddTaskViewController.swift */; };
+		C9691D2A261185320039A509 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D29261185320039A509 /* TaskCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +58,15 @@
 		C9691CCB26112ADB0039A509 /* ProjectsMangerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjectsMangerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9691CCF26112ADB0039A509 /* ProjectsMangerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsMangerUITests.swift; sourceTree = "<group>"; };
 		C9691CD126112ADB0039A509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9691CE8261131670039A509 /* ProjectsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsListViewController.swift; sourceTree = "<group>"; };
+		C9691CF3261132930039A509 /* ProjectsManger.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ProjectsManger.xcdatamodel; sourceTree = "<group>"; };
+		C9691CF8261135C00039A509 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		C9691D01261138890039A509 /* Project + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Project + Extension.swift"; sourceTree = "<group>"; };
+		C9691D0A261147C50039A509 /* ProjectCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCell.swift; sourceTree = "<group>"; };
+		C9691D1A261150090039A509 /* AddProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectViewController.swift; sourceTree = "<group>"; };
+		C9691D1F261167EC0039A509 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
+		C9691D2426116F390039A509 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		C9691D29261185320039A509 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +117,9 @@
 		C9691CAC26112ADA0039A509 /* ProjectsManger */ = {
 			isa = PBXGroup;
 			children = (
+				C9691D09261147AF0039A509 /* View */,
+				C9691CF1261131F80039A509 /* Model */,
+				C9691CED2611316E0039A509 /* ViewController */,
 				C9691CAD26112ADA0039A509 /* AppDelegate.swift */,
 				C9691CAF26112ADA0039A509 /* SceneDelegate.swift */,
 				C9691CB126112ADA0039A509 /* ViewController.swift */,
@@ -126,6 +147,44 @@
 				C9691CD126112ADB0039A509 /* Info.plist */,
 			);
 			path = ProjectsMangerUITests;
+			sourceTree = "<group>";
+		};
+		C9691CED2611316E0039A509 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				C9691CE8261131670039A509 /* ProjectsListViewController.swift */,
+				C9691CF8261135C00039A509 /* DataController.swift */,
+				C9691D1A261150090039A509 /* AddProjectViewController.swift */,
+				C9691D1F261167EC0039A509 /* ProjectViewController.swift */,
+				C9691D2426116F390039A509 /* AddTaskViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		C9691CF1261131F80039A509 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C9691D002611386A0039A509 /* Manage Object Extention */,
+				C9691CF2261132930039A509 /* ProjectsManger.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C9691D002611386A0039A509 /* Manage Object Extention */ = {
+			isa = PBXGroup;
+			children = (
+				C9691D01261138890039A509 /* Project + Extension.swift */,
+			);
+			path = "Manage Object Extention";
+			sourceTree = "<group>";
+		};
+		C9691D09261147AF0039A509 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C9691D0A261147C50039A509 /* ProjectCell.swift */,
+				C9691D29261185320039A509 /* TaskCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +317,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9691D20261167EC0039A509 /* ProjectViewController.swift in Sources */,
+				C9691CE9261131670039A509 /* ProjectsListViewController.swift in Sources */,
+				C9691CF9261135C00039A509 /* DataController.swift in Sources */,
 				C9691CB226112ADA0039A509 /* ViewController.swift in Sources */,
+				C9691D2A261185320039A509 /* TaskCell.swift in Sources */,
+				C9691D0B261147C50039A509 /* ProjectCell.swift in Sources */,
 				C9691CAE26112ADA0039A509 /* AppDelegate.swift in Sources */,
+				C9691D2526116F390039A509 /* AddTaskViewController.swift in Sources */,
 				C9691CB026112ADA0039A509 /* SceneDelegate.swift in Sources */,
+				C9691D1B261150090039A509 /* AddProjectViewController.swift in Sources */,
+				C9691CF4261132930039A509 /* ProjectsManger.xcdatamodeld in Sources */,
+				C9691D02261138890039A509 /* Project + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,6 +655,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9691CF2261132930039A509 /* ProjectsManger.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9691CF3261132930039A509 /* ProjectsManger.xcdatamodel */,
+			);
+			currentVersion = C9691CF3261132930039A509 /* ProjectsManger.xcdatamodel */;
+			path = ProjectsManger.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C9691CA226112ADA0039A509 /* Project object */;
 }
