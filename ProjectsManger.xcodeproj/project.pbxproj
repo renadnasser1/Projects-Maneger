@@ -24,6 +24,7 @@
 		C9691D20261167EC0039A509 /* ProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D1F261167EC0039A509 /* ProjectViewController.swift */; };
 		C9691D2526116F390039A509 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D2426116F390039A509 /* AddTaskViewController.swift */; };
 		C9691D2A261185320039A509 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D29261185320039A509 /* TaskCell.swift */; };
+		C9691D2F2611F4C80039A509 /* Task + Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691D2E2611F4C80039A509 /* Task + Extention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		C9691D1F261167EC0039A509 /* ProjectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectViewController.swift; sourceTree = "<group>"; };
 		C9691D2426116F390039A509 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
 		C9691D29261185320039A509 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
+		C9691D2E2611F4C80039A509 /* Task + Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Task + Extention.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				C9691D01261138890039A509 /* Project + Extension.swift */,
+				C9691D2E2611F4C80039A509 /* Task + Extention.swift */,
 			);
 			path = "Manage Object Extention";
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				C9691D20261167EC0039A509 /* ProjectViewController.swift in Sources */,
 				C9691CE9261131670039A509 /* ProjectsListViewController.swift in Sources */,
 				C9691CF9261135C00039A509 /* DataController.swift in Sources */,
+				C9691D2F2611F4C80039A509 /* Task + Extention.swift in Sources */,
 				C9691CB226112ADA0039A509 /* ViewController.swift in Sources */,
 				C9691D2A261185320039A509 /* TaskCell.swift in Sources */,
 				C9691D0B261147C50039A509 /* ProjectCell.swift in Sources */,

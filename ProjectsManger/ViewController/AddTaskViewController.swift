@@ -69,7 +69,7 @@ class AddTaskViewController: UIViewController {
     }
     
     func showAlert(){
-        let alert = UIAlertController(title: "Task added Successfuly", message: "Task have been added it to its \(project.name ?? "Project") Task List", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Task added Successfuly", message: "Task have been added to its \(project.name ?? "project") tasks list", preferredStyle: UIAlertController.Style.alert)
         
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)

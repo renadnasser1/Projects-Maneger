@@ -16,6 +16,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var goalsLabel: UILabel!
     @IBOutlet weak var dataLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
     
     
     var project:Project!
@@ -34,9 +35,8 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setUIElements()
         setUpFetchResult()
-        
+        setUIElements()
 
     }
     
@@ -85,6 +85,14 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
         goalsLabel.text = project.goals
         if let startDate = project.startDate{
             dataLabel.text = dateFormatter.string(from: startDate) }
+        
+        var totalCost : Float = 0
+        if let tasks = Array(arrayLiteral: project.tasks) as? [Task]{
+            for task in tasks {
+                totalCost += task.cost
+            }
+            costLabel.text = "\(totalCost) SR"
+        }
 
     }
     //MARK: - Editting
