@@ -18,6 +18,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     
+    var totalCost : Float = 0
     
     var project:Project!
     var fetchResultsController : NSFetchedResultsController<Task>!
@@ -86,15 +87,20 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
         if let startDate = project.startDate{
             dataLabel.text = dateFormatter.string(from: startDate) }
         
-        var totalCost : Float = 0
-        if let tasks = Array(arrayLiteral: project.tasks) as? [Task]{
+        if let tasks = fetchResultsController.fetchedObjects{
+            
             for task in tasks {
-                totalCost += task.cost
+                updateCost(with: task.cost)
             }
-            costLabel.text = "\(totalCost) SR"
         }
 
     }
+    
+    func updateCost(with cost:Float){
+        totalCost += cost
+        costLabel.text = "\(totalCost) SR"
+    }
+    
     //MARK: - Editting
     
     // Deletes the `Task` at the specified index path
@@ -134,10 +140,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell", for: indexPath) as! TaskCell
         
         // Configure cell
-        cell.taskName.text = aTask.name
-//        if let creationDate = aTask.creationDate{
-//            cell.dateLabel.text = dateFormatter.string(from: creationDate) }
-        
+        cell.taskName.text = aTask.name        
         return cell
     }
     
