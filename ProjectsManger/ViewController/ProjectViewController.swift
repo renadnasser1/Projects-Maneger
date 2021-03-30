@@ -18,7 +18,6 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     
-    @IBOutlet weak var nameLabel: UILabel!
     var totalCost : Float = 0
     
     var project:Project!
@@ -83,15 +82,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     //MARK: - Set UI Elements
 
     func setUIElements(){
-//        navigationItem.title = project.name
-        
-        nameLabel.text=project.name
-        // make multiline for name
-        nameLabel.numberOfLines = 0
-        nameLabel.lineBreakMode = .byWordWrapping
-        nameLabel.frame.size.width = 300
-        nameLabel.sizeToFit()
-        
+        navigationItem.title = project.name
         
         
         descriptionLabel.text = project.descriptions

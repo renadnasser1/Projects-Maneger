@@ -21,21 +21,14 @@ class TaskViewController: UIViewController, NSFetchedResultsControllerDelegate {
 
     var dataController:DataController!
 
-    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
     
     @IBOutlet weak var resLabel: UILabel!
     
     @IBOutlet weak var costLabel: UILabel!
+   
     /// A date formatter for date text in note cells
-    
-    
-    @IBOutlet weak var backButton: UIButton!
-    
-
- 
-
     
     let dateFormatter: DateFormatter = {
         let df = DateFormatter()
@@ -54,7 +47,7 @@ class TaskViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
         setUpFetchResult()
         setUIElements()
-        nameLabel.text = task.name
+
         durationLabel.text=String(task.duration)
         resLabel.text=task.recersous
         dateLabel.text=dateFormatter.string(from: task.startDate!)
@@ -63,11 +56,7 @@ class TaskViewController: UIViewController, NSFetchedResultsControllerDelegate {
         
         navigationItem.title = task.name
         
-        // make multiline for name
-        nameLabel.numberOfLines = 0
-        nameLabel.lineBreakMode = .byWordWrapping
-        nameLabel.frame.size.width = 300
-        nameLabel.sizeToFit()
+
         // make multiline for resourse
         resLabel.numberOfLines = 0
         resLabel.lineBreakMode = .byWordWrapping
@@ -117,15 +106,7 @@ class TaskViewController: UIViewController, NSFetchedResultsControllerDelegate {
     //MARK: - Set UI Elements
 
     func setUIElements(){
-       // navigationItem.title = task.name
-
-
-        if let tasks = fetchResultsController.fetchedObjects{
-
-            for task in tasks {
-//                updateCost(with: task.cost)
-            }
-        }
+        navigationItem.title = task.name
 
     }
 
