@@ -117,7 +117,7 @@ class TaskViewController: UIViewController, NSFetchedResultsControllerDelegate {
     //MARK: - Set UI Elements
 
     func setUIElements(){
-        navigationItem.title = task.name
+       // navigationItem.title = task.name
 
 
         if let tasks = fetchResultsController.fetchedObjects{

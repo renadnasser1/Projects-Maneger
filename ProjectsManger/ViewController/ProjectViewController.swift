@@ -50,6 +50,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
             tableView.reloadRows(at: [indexPath], with: .fade)
         }
         tableView.reloadData()
+        setTaskCost()
 
     }
     
@@ -103,20 +104,20 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
         goalsLabel.text = project.goals
         if let startDate = project.startDate{
             dataLabel.text = dateFormatter.string(from: startDate) }
-        
+        setTaskCost()
+    }
+    
+    func setTaskCost(){
+        var totalCost :Float = 0.0
         if let tasks = fetchResultsController.fetchedObjects{
             
             for task in tasks {
-                updateCost(with: task.cost)
+                totalCost += task.cost
             }
         }
-
-    }
-    
-    func updateCost(with cost:Float){
-        totalCost += cost
         costLabel.text = "\(totalCost) SR"
     }
+    
     
     //MARK: - Editting
     

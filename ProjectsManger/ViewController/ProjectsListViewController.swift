@@ -103,10 +103,6 @@ class ProjectsListViewController: UIViewController, UITableViewDataSource {
         // Configure cell
         cell.projectName.text = aProject.name
         
-//        if let count = aNotebook.notes?.count{
-//            let pageString = count == 1 ? "page" : "pages"
-//            cell.pageCountLabel.text = "\(count) \(pageString)"
-//        }
         
         return cell
     }
