@@ -18,6 +18,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var dataLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
     
+    @IBOutlet weak var nameLabel: UILabel!
     var totalCost : Float = 0
     
     var project:Project!
@@ -81,8 +82,24 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     //MARK: - Set UI Elements
 
     func setUIElements(){
-        navigationItem.title = project.name
+//        navigationItem.title = project.name
+        
+        nameLabel.text=project.name
+        // make multiline for name
+        nameLabel.numberOfLines = 0
+        nameLabel.lineBreakMode = .byWordWrapping
+        nameLabel.frame.size.width = 300
+        nameLabel.sizeToFit()
+        
+        
+        
         descriptionLabel.text = project.descriptions
+        // make multiline 
+        descriptionLabel.numberOfLines = 0
+        descriptionLabel.lineBreakMode = .byWordWrapping
+        descriptionLabel.frame.size.width = 300
+        descriptionLabel.sizeToFit()
+        
         goalsLabel.text = project.goals
         if let startDate = project.startDate{
             dataLabel.text = dateFormatter.string(from: startDate) }
@@ -158,7 +175,23 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
         if let vc = segue.destination as? AddTaskViewController {
             vc.dataController=dataController
             vc.project = project
+        }else if let vc = segue.destination as? AddTaskViewController {
+            vc.dataController=dataController
+            vc.project = project
+           
+        }else if let vc = segue.destination as? TaskViewController {
+            vc.dataController=dataController
+            vc.project = project
+            if let indexPath = tableView.indexPathForSelectedRow {
+                vc.task = fetchResultsController.object(at: indexPath)
+                vc.dataController=dataController
+              
+            }
+           
         }
+        
+        
+        
 //        if let vc = segue.destination as? ProjectViewController {
 //
 //            if let indexPath = tableView.indexPathForSelectedRow {

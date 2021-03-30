@@ -18,7 +18,7 @@ class AddProjectViewController: UIViewController {
     @IBOutlet weak var addButton: UIButton!
     
     var dataController:DataController!
-
+    var valdition = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,10 @@ class AddProjectViewController: UIViewController {
     //MARK: - Actions
     
     @IBAction func addButtonTapped(_ sender: Any) {
+        checkInput()
+        if(valdition){
         addProject()
+        }
     }
     
     @IBAction func cancelTapped(_ sender: Any) {
@@ -55,5 +58,25 @@ class AddProjectViewController: UIViewController {
         self.dismiss(animated: true)
         
     }
+     
+    func checkInput(){
+        if(nameTextField.text=="" ){
+            valdition=false
+            showAlertForValidation()
+        }
+        
+      
+        
+    }
+    
+    
+    
+    func showAlertForValidation(){
+        let alert = UIAlertController(title: "Error", message: "The name is empty", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 
 }

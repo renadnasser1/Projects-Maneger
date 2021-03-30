@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
+class AddTaskViewController: UIViewController, UITextViewDelegate, UITextFieldDelegate {
 
     //MARK:- Variables
     @IBOutlet weak var nameTextFiled: UITextField!
@@ -22,10 +22,13 @@ class AddTaskViewController: UIViewController {
     
     var dataController:DataController!
     var project : Project!
-
+    var valdition = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        costTextFiled.delegate = self
+        durationTextFiled.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -33,7 +36,10 @@ class AddTaskViewController: UIViewController {
     //MARK:-Action
     
     @IBAction func addTapped(_ sender: Any) {
+        checkInput()
+        if(valdition){
         addTask()
+        }
 
     }
     
@@ -74,6 +80,47 @@ class AddTaskViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
+    
+    func  checkInput(){
+        if( nameTextFiled.text=="" ){
+            valdition=false
+            showAlertForValidation()
+        }
+
+        
+        
+    }
+    
+    func showAlertForValidation(){
+        let alert = UIAlertController(title: "Error", message: "The name is empty", preferredStyle: UIAlertController.Style.alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if textField == costTextFiled || textField == durationTextFiled {
+                    let allowedCharacters = "1234567890."
+                    let allowedCharacterSet = CharacterSet(charactersIn: allowedCharacters)
+                    let typedCharacterSet = CharacterSet(charactersIn: string)
+                    let alphabet = allowedCharacterSet.isSuperset(of: typedCharacterSet)
+                   
+
+            if  alphabet == false {
+                return false
+            }
+
+
+            let NewLength = string.count - range.length
+            return NewLength <= 10
+
+
+          } else {
+            return false
+        }
+      }
     
     
 

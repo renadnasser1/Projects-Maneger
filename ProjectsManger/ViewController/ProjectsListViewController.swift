@@ -33,6 +33,7 @@ class ProjectsListViewController: UIViewController, UITableViewDataSource {
         
         setUpFetchedResultController()
         
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -129,6 +130,7 @@ class ProjectsListViewController: UIViewController, UITableViewDataSource {
             if let indexPath = tableView.indexPathForSelectedRow {
                 vc.project = fetchResultsController.object(at: indexPath)
                 vc.dataController=dataController
+                
             }
         }
     }
