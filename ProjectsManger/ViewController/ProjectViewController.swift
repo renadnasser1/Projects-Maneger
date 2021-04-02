@@ -35,7 +35,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
     //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.36, green: 0.18, blue: 0.27, alpha: 1.00)
         setUpFetchResult()
         setUIElements()
 

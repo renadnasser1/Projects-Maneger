@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C953454B261271A600492584 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C953454A261271A600492584 /* TaskViewController.swift */; };
+		C95AEFA026167CB500E1C2FB /* MA5.GIF in Resources */ = {isa = PBXBuildFile; fileRef = C95AEF9F26167CB500E1C2FB /* MA5.GIF */; };
+		C95AEFA52616833500E1C2FB /* SplachScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95AEFA42616833500E1C2FB /* SplachScreen.swift */; };
 		C9691CAE26112ADA0039A509 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CAD26112ADA0039A509 /* AppDelegate.swift */; };
 		C9691CB026112ADA0039A509 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CAF26112ADA0039A509 /* SceneDelegate.swift */; };
 		C9691CB226112ADA0039A509 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9691CB126112ADA0039A509 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 
 /* Begin PBXFileReference section */
 		C953454A261271A600492584 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		C95AEF9F26167CB500E1C2FB /* MA5.GIF */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = MA5.GIF; sourceTree = "<group>"; };
+		C95AEFA42616833500E1C2FB /* SplachScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplachScreen.swift; sourceTree = "<group>"; };
 		C9691CAA26112ADA0039A509 /* ProjectsManger.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjectsManger.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9691CAD26112ADA0039A509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9691CAF26112ADA0039A509 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -129,6 +133,7 @@
 				C9691CB126112ADA0039A509 /* ViewController.swift */,
 				C9691CB326112ADA0039A509 /* Main.storyboard */,
 				C9691CB626112ADB0039A509 /* Assets.xcassets */,
+				C95AEF9F26167CB500E1C2FB /* MA5.GIF */,
 				C9691CB826112ADB0039A509 /* LaunchScreen.storyboard */,
 				C9691CBB26112ADB0039A509 /* Info.plist */,
 			);
@@ -162,6 +167,7 @@
 				C9691D1F261167EC0039A509 /* ProjectViewController.swift */,
 				C953454A261271A600492584 /* TaskViewController.swift */,
 				C9691D2426116F390039A509 /* AddTaskViewController.swift */,
+				C95AEFA42616833500E1C2FB /* SplachScreen.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -298,6 +304,7 @@
 			files = (
 				C9691CBA26112ADB0039A509 /* LaunchScreen.storyboard in Resources */,
 				C9691CB726112ADB0039A509 /* Assets.xcassets in Resources */,
+				C95AEFA026167CB500E1C2FB /* MA5.GIF in Resources */,
 				C9691CB526112ADA0039A509 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -326,6 +333,7 @@
 				C9691D20261167EC0039A509 /* ProjectViewController.swift in Sources */,
 				C953454B261271A600492584 /* TaskViewController.swift in Sources */,
 				C9691CE9261131670039A509 /* ProjectsListViewController.swift in Sources */,
+				C95AEFA52616833500E1C2FB /* SplachScreen.swift in Sources */,
 				C9691CF9261135C00039A509 /* DataController.swift in Sources */,
 				C9691D2F2611F4C80039A509 /* Task + Extention.swift in Sources */,
 				C9691CB226112ADA0039A509 /* ViewController.swift in Sources */,

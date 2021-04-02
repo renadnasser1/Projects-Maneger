@@ -22,7 +22,8 @@ class AddProjectViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.tintColor = UIColor(red: 0.36, green: 0.18, blue: 0.27, alpha: 1.00)
         // Do any additional setup after loading the view.
     }
     
