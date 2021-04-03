@@ -120,6 +120,7 @@ class ProjectViewController: UIViewController, UITableViewDataSource {
         dataController.viewContext.delete(taskToDelete)
         
         try? dataController.viewContext.save()
+        setTaskCost()
         
     }
     

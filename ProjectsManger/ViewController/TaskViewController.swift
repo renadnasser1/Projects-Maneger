@@ -48,7 +48,7 @@ class TaskViewController: UIViewController, NSFetchedResultsControllerDelegate {
         setUpFetchResult()
         setUIElements()
 
-        durationLabel.text=String(task.duration)
+        durationLabel.text=String(Int(task.duration))
         resLabel.text=task.recersous
         dateLabel.text=dateFormatter.string(from: task.startDate!)
        
